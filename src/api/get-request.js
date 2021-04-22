@@ -29,7 +29,7 @@ class GetRequest {
           }
         }
       }
-    if(data) return data;
+    if(data !== undefined) return data;
     } catch (error) {
       throw ('error endpoint')
     }

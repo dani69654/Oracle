@@ -38,7 +38,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"_callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"name\":\"_callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"Interface of the oracle callback functions.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/interfaces/IRequesterContract.sol\":\"RequesterContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/interfaces/IRequesterContract.sol\":{\"keccak256\":\"0xb01017b957d2d04c3fb5362a81ef2df02abe200c157ba0b720b3c71d2914179f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5dece70751797653ca5b6c79cda765bcf42e400696e5f8d77007777bf9d1ea51\",\"dweb:/ipfs/QmP3zoqJrgA31gzZ1vZwenDCMAX7FmDUfSsFr5NkFFriK8\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"_callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"name\":\"_callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"Interface of the oracle callback functions.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/interfaces/IRequesterContract.sol\":\"RequesterContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/interfaces/IRequesterContract.sol\":{\"keccak256\":\"0xb01017b957d2d04c3fb5362a81ef2df02abe200c157ba0b720b3c71d2914179f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5dece70751797653ca5b6c79cda765bcf42e400696e5f8d77007777bf9d1ea51\",\"dweb:/ipfs/QmP3zoqJrgA31gzZ1vZwenDCMAX7FmDUfSsFr5NkFFriK8\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -47,9 +47,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n/**\n * @title Interface of the oracle callback functions.\n */\ninterface RequesterContract {\n\n  function _callback(bytes32, uint) external;\n  function _callback(bytes32, bool) external;\n}\n",
-  "sourcePath": "/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/interfaces/IRequesterContract.sol",
+  "sourcePath": "/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/interfaces/IRequesterContract.sol",
   "ast": {
-    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/interfaces/IRequesterContract.sol",
+    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/interfaces/IRequesterContract.sol",
     "exportedSymbols": {
       "RequesterContract": [
         458
@@ -255,7 +255,7 @@
     "src": "33:212:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/interfaces/IRequesterContract.sol",
+    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/interfaces/IRequesterContract.sol",
     "exportedSymbols": {
       "RequesterContract": [
         458
@@ -466,7 +466,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-19T20:22:50.808Z",
+  "updatedAt": "2021-04-20T08:35:22.697Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

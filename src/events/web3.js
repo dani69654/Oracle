@@ -7,7 +7,7 @@ const web3 = new Web3(localprovider);
 const crypto = require("crypto");
 
 // The oracle contract address.
-const contractAddress = "0x17C7E3E4a97949e15F04DCbE137928D994570038";
+const contractAddress = "0x8396B8B0b971c6A16b4A75859CAD2EAF3162b6c0";
 
 // The signer account.
 const account = web3.eth.accounts.privateKeyToAccount(process.env["PRIVATE_KEY"]);

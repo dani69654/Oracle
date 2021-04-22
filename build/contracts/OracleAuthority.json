@@ -1,18 +1,18 @@
 {
   "contractName": "OracleAuthority",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/system/OracleAuthority.sol\":\"OracleAuthority\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/system/OracleAuthority.sol\":{\"keccak256\":\"0x16b551a8ca2b114649246f5a9f5f53f906520ddc30c41a4c74e44f8f1c27650f\",\"urls\":[\"bzz-raw://f645857de28e1f2079767712d0372b5c67d31c8c0427227520d83b1c00fa7bc4\",\"dweb:/ipfs/QmVJ75xuhjUcshsLE4q1VWuT8z2bLvLEHP2pobjH5Pa2wB\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220df48af54d53907b3d9b05bf7dc5f58fe99df296cf91e87fd0bbe817ca1eccf0c64736f6c63430008000033",
-  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220df48af54d53907b3d9b05bf7dc5f58fe99df296cf91e87fd0bbe817ca1eccf0c64736f6c63430008000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/system/OracleAuthority.sol\":\"OracleAuthority\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/system/OracleAuthority.sol\":{\"keccak256\":\"0x16b551a8ca2b114649246f5a9f5f53f906520ddc30c41a4c74e44f8f1c27650f\",\"urls\":[\"bzz-raw://f645857de28e1f2079767712d0372b5c67d31c8c0427227520d83b1c00fa7bc4\",\"dweb:/ipfs/QmVJ75xuhjUcshsLE4q1VWuT8z2bLvLEHP2pobjH5Pa2wB\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122031f66e89e517f142b870c57d4aed7e60b0b6a330617a978a4018aa7604efbf4a64736f6c63430008000033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122031f66e89e517f142b870c57d4aed7e60b0b6a330617a978a4018aa7604efbf4a64736f6c63430008000033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
   "sourceMap": "326:1099:4:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "326:1099:4:-:0;;;;;",
   "source": "pragma solidity 0.8.0;\n\n\n  // @title Verify valid requests and track completed ones.\n  // @dev A message is valid only ones.\n  // Duplicated messages will result in a second attempt while invalid messages will result in blacklist of the sender.\n  // An attempt to use a blacklisted address will result in a loss of the fee.\n\n\ncontract OracleAuthority {\n\n\n  \n  // List of previous messages.\n  mapping(bytes32 => bool) internal previousMessages;\n\n  \n  // Blacklist of invalid senders.\n  mapping(address => bool) internal blacklist;\n\n  \n  // Verify the message is not used already.\n  // @param _message is the message to verify.\n  modifier isPreviousMessage(bytes32 _message) {\n    require(!previousMessages[_message], \"Message already used\");\n    _;\n  }\n\n  modifier isBlacklisted(address _sender) {\n    require(!_isBlacklisted(_sender), \"Sender blacklisted\");\n    _;\n  }\n\n  \n  // Add the message to previous message list.\n  // @param _message is the message to add.\n  function setPreviousMessage(bytes32 _message) internal {\n    previousMessages[_message] = true;\n  }\n\n  \n  // Add sender to blacklist.\n  // @param _sender is the sender to add.\n  function addToBlacklist(address _sender) internal {\n    blacklist[_sender] = true;\n  }\n\n  \n  // Check if sender is blaclisted.\n  // @param _sender is the sender to check.\n  function _isBlacklisted(address _sender) internal view returns (bool) {\n    return blacklist[_sender];\n  }\n}",
-  "sourcePath": "/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/system/OracleAuthority.sol",
+  "sourcePath": "/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/system/OracleAuthority.sol",
   "ast": {
-    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/system/OracleAuthority.sol",
+    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/system/OracleAuthority.sol",
     "exportedSymbols": {
       "OracleAuthority": [
         577
@@ -885,7 +885,7 @@
     "src": "0:1425:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/oracle/contracts/system/OracleAuthority.sol",
+    "absolutePath": "/Users/dani/Documents/Coding/Solidity/BSC/Oracle/contracts/system/OracleAuthority.sol",
     "exportedSymbols": {
       "OracleAuthority": [
         577
@@ -1763,7 +1763,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-19T20:22:50.810Z",
+  "updatedAt": "2021-04-20T08:35:22.699Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
