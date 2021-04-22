@@ -1,19 +1,22 @@
-const { fetch } = require('fetch-h2');
+import { fetch } from 'fetch-h2';
 
-class GetRequest {
+export class GetRequest {
 
-  constructor (_baseUrl, _path, _jsonFormat) {
+  private baseUrl: string;
+  private path: string;
+  private jsonFormat: [];
+
+  constructor (_baseUrl: string, _path: string, _jsonFormat: []) {
     this.baseUrl = _baseUrl;
     this.path = _path;
     this.jsonFormat = _jsonFormat;
   }
 
-
   /**
    * New get request.
    * 
    */
-  async get() {
+  public async get() {
     try{
       const response = await fetch(`${this.baseUrl}${this.path}`,
     {
@@ -33,8 +36,5 @@ class GetRequest {
     } catch (error) {
       throw ('error endpoint')
     }
-    
   }
 }
-
-module.exports = GetRequest;

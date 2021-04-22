@@ -1,9 +1,9 @@
-const express = require("express");
+import * as express from 'express';
 const app = express();
 const PORT = "4000";
 
-const GetRequest  = require ('./api/get-request');
-const listenOracle = require('./events/index')
+import { GetRequest } from './api/get-request';
+import { listenOracle } from './events/index';
 
 
 app.listen(PORT, async () => {
