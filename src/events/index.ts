@@ -1,13 +1,13 @@
-const { 
+import { 
   oracleContract,
   signMessage,
   web3
-} = require ('./web3');
+} from './web3';
 
-const GetRequest = require ('../api/get-request');
+import { GetRequest } from '../api/get-request';
 
 
-const listenOracle = () => {
+export const listenOracle = () => {
 
   // RANDOM NUMBER
   oracleContract.events.randomNumberRequested()
@@ -96,5 +96,3 @@ const listenOracle = () => {
     }
   });
 }
-
-module.exports = listenOracle;
